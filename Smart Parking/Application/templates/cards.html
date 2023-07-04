@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> free slots</title>
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        
+
+function clickablediv1(){
+    document.getElementById("div1").style.background="blue";
+}
+
+function clickablediv2(){
+    document.getElementById("div2").style.background="red";
+}
+
+
+    </script>
+   
+    <link rel="stylesheet" href="./static/css/cards.css">
+    
+</head>
+
+
+
+<div class="pull-right  p-5">
+
+    <a href="{{url_for('views.price')}}" >Continue</a> 
+    
+  </div>
+
+<body>
+    <div class="main">
+
+        <div id="div1" onclick="clickablediv1(1)">
+        </div>
+
+        <div id="div2" onclick="clickablediv2()">
+        </div>
+
+        <div id="div3" onclick="clickablediv3()">
+        </div>
+        <div id="div4" onclick="clickablediv4()">
+        </div>
+        {%for i in data %}
+  
+        <li>{{ i }}</li>
+        
+        {%endfor%}
+
+  
+
+    </div>
+
+
+
+</body>
+</html>
